@@ -1,0 +1,26 @@
+
+chaining                                       Open chaining
+1. Hash Table never fills                   Table may become full and resizing becomes mandatory
+2. less sensitive to hash function         Extra care required for Clustering 
+3. poor cache performance                  cache FRIENDLLY
+4. extra space for links   (1+alpha)        extra space might be needed to achieve same performance as chaining
+                                            1/1-alpha
+                                            no of keys know in advance (perfect hashing)
+
+but when we want more and more keys to inserted dynamically then you can use the chaining 
+
+    *****
+  0 *   * ----->
+    *****
+  1 *   *------->
+    *****
+  2 *   *-------->
+    ***** 
+  3 *   *------->
+    *****
+  4 *   *------->
+    *****
+  5 *   *
+    *****
+  6 *   *
+    *****

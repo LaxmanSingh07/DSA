@@ -1,0 +1,38 @@
+//Hashing 
+Hashing is mainy use to impleent dictonary where we have key value pairs it is also use in case of set 
+
+
+
+it prvoide search insert and delete o(1) on averge 
+
+in hash table or hasing we always have a unique value no duplicates allowed 
+
+// you inserent all the keys in an array
+ if unordered fashion
+ search o(n);
+ if sorted fashion
+ search o(logn);
+
+ /// unordered
+ insert delete --o(1);
+
+
+
+ /// binary search tree AVL AND RED BLACK tree ------> they take big O(logn ) time for search insert and delete ;
+ but it is still more than 0(1)
+
+
+
+ hence hashing beats arrays,avl and red black trees 
+ in term = search, insert and delete 
+
+
+// Hashing IS NOT USEFUL for
+LIKE EXAMPLES-------
+ FINDING CLOSESST VALUE 
+ SORTED DATA
+
+ WE USE AVL AND RED BLACK TREE 
+
+ PREFIX searchING 
+ TRIE DATA STRCTURE 

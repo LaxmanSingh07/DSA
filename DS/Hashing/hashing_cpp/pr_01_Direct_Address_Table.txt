@@ -1,0 +1,27 @@
+//DIRECT ADDRESS TABLE 
+
+Imagine a situation where you have 1000 keys with value from ( 0 to 999), how would you implement following in O(1) time 
+
+1. search 
+2. insert
+3. delete
+
+
+EXAMPLE operation
+
+insert(10)
+insert(20)
+insert( 119)
+search(10)
+search(20)---> 
+search(119)
+delete(119)
+
+
+
+we can also use if we know the range of the input 
+// DIRECT addres table is used for smaller value or small range value 
+
+problem ----> it can't handle the large key
+and another is floating point no(index is always int ) 
+your keys can be String and address 

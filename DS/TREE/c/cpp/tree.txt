@@ -1,0 +1,48 @@
+what is binary tree --->
+
+like family tree 
+
+tree is a non-linear DS 
+one node can connect multiple nodes 
+
+Basic Terms
+
+1. node  ----> 
+
+Node{
+    int data;
+    int *left;
+    int * right ;
+}
+2. Root
+3. Children
+4. Parent
+5. Ancestor ----> 
+6. Sibllings ---> Children of same parent 
+7. Decendent ---->
+8. leaf---> no child 
+
+
+binary tree degree<=2
+
+//Basic structure 
+
+Node{
+    int data;
+    int * left;
+    int * right;
+
+}
+
+
+n-ary tree
+
+node{
+    int data;
+    list<node* > child;
+}
+
+
+
+
+

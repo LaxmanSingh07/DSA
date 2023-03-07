@@ -1,0 +1,18 @@
+stack -- liof last in first out 
+stack in like stack of book
+it is closeed form bottom 
+we  can access the element and size of the elements 
+we can use the operation 
+only on the top element only
+
+1.push
+2.pop
+3.top
+
+
+    Quese --> it is know as fifo
+    first in first out 
+
+    there are some operation in case Quese which are 
+    push 
+    pop front

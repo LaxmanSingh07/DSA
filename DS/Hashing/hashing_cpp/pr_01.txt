@@ -1,0 +1,54 @@
+//Hashing is mainly used to implement the Hashing where you have the key value pairs 
+it is also used to implement set 
+
+
+
+//the main thing of the hasing is that it provide search,insert and delete all three operation int O(n) time complexity 
+// in hash table we always has the unique value 
+not duplicate is allowed 
+
+
+it a key is already exist and you will try to insert the another key then it will get overwrite 
+
+
+delete ----> deleting the key 
+
+all the known data structure is beaten by the Hashing when you consider these three operations 
+
+//Array 
+
+-----> search --->liner time ---> unsorted 
+-------> sorted ----> then O(log)
+
+//binary search tree 
+
+-----> O(logn)
+
+
+//---------> Hashing is used for  strict search 
+
+//-------> It is only used for Search ,insert delete
+
+Not useful for: 
+
+---> finding closest value ----avl or red black tree
+---> sorted data--------------avl or red black tre
+---> prefix searching  ------> Trie data structure
+
+
+
+
+
+//Hash Table is mostly used(after array ) DS in the computer science 
+
+Application OF Hashing
+
+1. Dictionaries 
+2. Database Indexing ----> either used b/b+ tree OR hASINGH
+3. Crytography -----> to store the hash 
+4. Caches ---> ex. browser Caches ..... url is key and data becomes value 
+5. Symbol Table in Compliers/Interpreters ...... to find out there address
+6. routers ----> connected to local devices ---> and internet also 
+7. getting data from dataBases 
+ 8. many more 
+

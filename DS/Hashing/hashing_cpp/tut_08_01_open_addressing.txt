@@ -1,0 +1,160 @@
+OPEN ADDRESSING
+
+NO OF SLOTS IN HASH TABLE >=NO OF KEYS TO BE INSERTED 
+
+CACHE FRIENDLLY 
+
+LINEAR PROBING 
+
+LET SAME HASH FUNCTION 
+HASH(KEY)=Key%
+
+
+KEYS  : 50,51,49,16,56,15,19
+
+if collision will occure we linearlly SEARCH for next empty slot 
+    *****
+  0  * 49 * //56---> collisioin
+    *** **
+  1 * 50 *
+    *****
+  2 * 51 * //----> collision apply linearlly probing
+    *****
+  3 * 16 *
+    *****
+  4 * 56 *
+    *****
+  5 * 15 *
+    *****
+  6 * 19 *
+    *****
+
+
+
+one another EXAMPLE
+
+keys: 48,42,50,55,53
+
+  0 * 42 * 
+    *** **
+  1 * 50 *
+    *****
+  2 * 55 *
+    ***** 
+  3 *   *
+    *****
+  4 * 53 *
+    *****
+  5 *   *
+    *****
+  6 * 48 *
+    *****
+
+
+
+
+
+
+    //How to handle deleltion in open addressint ?
+
+
+insert(50),insert(51),insert(15),search(15)
+delete(15),search(15),search(64)
+
+Hash(key)=key%7
+
+
+  0 *  * 
+    *****
+  1 * 50 * //when you try to find 15 then 50 encounters wchich is not 15 
+    *****  // what will you do --> you will simplly linearlly search when 15 encounters or empty slot encounters you will stop.
+
+  2 * 51 *
+    ***** 
+  3 * 15 *
+    *****
+  4 *  *
+    *****
+  5 *   *
+    *****
+  6 *  *
+    *****
+
+
+search(64)
+---> 64%7=1
+linear searching 
+
+empty slot will encounters you will stop
+
+ 
+
+search : 
+      
+
+      we compute hash function 
+    we go to that index and compaire
+    if we find , we return true
+    othwise we linearlly search
+
+
+
+    we stop when one of the three cases are arrises
+
+    1. empty slot 
+    2. key found 
+    3. traverse through the whole table 
+
+
+
+delete(51)
+        we again for 51 if you will find make the slot empty
+        but simply making the slot empty may cause the problem
+
+
+problem with simply making the slot empty when we delete:
+
+
+  0 *  * 
+    *****
+  1 * 50 *
+    *****
+  2 *   *
+    ***** 
+  3 * 15 *
+    *****
+  4 *  *
+    *****
+  5 *   *
+    *****
+  6 *  *
+    *****
+
+
+suppose you want to search for 15 after deleltion of 51 
+when you do so, an empty space will encounter and you will simply return false which is not right 
+
+
+
+THE IDEA IS : 
+
+
+we marked these slots as deleted
+Don't stop the search when you see a deleted slot stop when you see an empty slot 
+
+however your insert can put the value in deleted slot 
+
+  0 *  * 
+    *****
+  1 * 50 *
+    *****
+  2 *deleted *
+    ***** 
+  3 * 15 *
+    *****
+  4 *  *
+    *****
+  5 *   *
+    *****
+  6 *  *
+    *****

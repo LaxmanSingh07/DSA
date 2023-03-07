@@ -1,0 +1,149 @@
+Double hashing
+we use two hash function 
+one hash function is something like key%7
+one more hash function to find the next slot while we are probing for a free slot 
+
+hash(key,i)=(h1(key)+ih2(key))%make
+
+********* .......*********
+
+if h2 (key ) is relaltively prime to m, then it always find a free slot iff there is one
+distributs keys more uniformly than linear probing and Quadratic probing
+
+no Clustering
+
+
+EXAMPLE : 
+  49,63,56,52,54,48
+
+m=7
+h1(key)=(key%7)
+h2(key)=6-(key%6)
+
+why this function like this 
+h2 function should never return zero (0)
+    ----> if it is returning the zero then you will keep probing the same location again and again 
+
+
+1. first 49%7=0;
+simply put it to the table 
+
+2. for seondkey 63%7=0
+    collision happen 
+    then 
+    h2(key)=6-(key%6)
+           =6-(63%6)
+           =6-3
+           =3
+    hash(key,i)=(h1(key)+ih2(key))%m
+               =(0+1*3)%7=3
+
+    put second element in the 3rd index 
+
+3. for third key  
+        56%7=0
+    collision happen
+    then 
+    h2(key)=6-(key%6)
+           =6-(56%6)
+           =6-2
+           =4
+
+4. for fourth key 
+    52%7=3
+
+    m=7
+    h1(key)=(key%7)
+    h2(key)=6-(key%6)
+           =6-(52%6)
+           6-4=2
+    
+5. for fifth key
+    54%7=5
+  
+6. for sixth element 
+    48%7= 6;
+
+  0 ***** 
+    * 49 *
+    *****
+  1 *    *
+    *****
+  2 * 52 *
+    ***** 
+  3 * 63 *
+    *****
+  4 * 56 *
+    *****
+  5 * 49  *
+    *****
+  6 * 42 *
+    *****
+
+  why h2(key) and m should be relaltively prime?
+  your Double hashing always find a free slot if there is a free slot 
+    h2(key)=6
+
+    h2(key ) tells you shift that you need to make from the current location
+
+     6 and7 are relaltively prime :
+
+    (1x6)%7=6
+    (2x6)%7=5
+    (3x6)%7=4
+    (4x6)%7=3
+    (5x6)%7=2
+    (6x6)%7=1
+
+
+
+    void DoubleHashingInsert(key)
+    {
+        if(table if full)
+        {
+            return error;
+        }
+
+        probe=h1(key) ;
+        offset=h2(key); // in linear probling offset is one 
+
+
+        while(table[probe] is occupied ){
+            probe=(probe+offset)%m;
+        }
+        table[probe]=key ;
+
+    }
+
+
+
+    //performance Analysis of search (unsucessful search)
+        alpha=n/m (should be<=1)
+
+        Assumption: Every probe sequence looks at a 
+                  random location 
+                (1-alpha) location of the table is empty 
+
+            expected no of probe required =?
+
+            let alpha=0.8
+           which means that 80% of your table is occupied and 20% of the table is empty 
+        then how many iteration you take in order to find the empty slot
+        1/5th of the total table is empty so you will take 5 iteration on averge 
+
+
+        if alpha =0.9 
+         it means that 90% of the slot is full and 10% is empty 
+
+         it means 1/10th is empty 
+
+         there is a requirement of atmost 10 iteration on averge to search empty space 
+
+
+            expected no of probe required =?
+             1/1-alpha;
+
+            if you compare open addressing with chaining then 
+
+                alpha tends to -------> 1
+                then expected no of probe is tends to infinite 

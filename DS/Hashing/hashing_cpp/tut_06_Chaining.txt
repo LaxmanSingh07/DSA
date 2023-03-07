@@ -1,0 +1,97 @@
+chaining 
+
+let hash function
+hash(key) =key%7
+
+key={50,21,58,17,15,49,56,22,23,25}
+
+HASH TABLE(ARRAY OF LINKED LIST)
+when will, collision will happen you have to insert that particular item is the end of the linked list 
+
+0      21----->49----->56
+
+1      50----->15----->22
+
+2      48----->23
+
+3      17
+
+4      25
+
+5
+
+6
+
+this is how chaining work
+
+performance of chaining
+
+m=no of slots in Hash table 
+n= no of keys to be inserted 
+
+load factor: alpha=n/m
+                  = no of keys to be inserted/number of slots in the hash table
+
+how big you want your hash table would be depends upon the factor
+
+
+LOAD FACTOR is an important parameter
+trade off b/w space and time 
+
+
+when load factor is large 
+----> then you will likly to have more collisons
+we want load factor is small
+
+
+
+expected chaing length for random set of length ---> we don't know
+worst case ------> every key will go to the same chain i.e thida(n)
+
+averge case --->
+
+we make an assumtation that keys are uniformally distributed 
+----> EXAMPLE : IF THERE ARE N KEYS AND N NUMBER OF slots THEN EVERY KEY WILL EQUALLY LIKLY TO GO ANY OTHER SLOT
+
+
+
+
+
+
+EXPECTED CHAIN LENGTH=ALPHA
+
+EXPECTED TIME TO SEARCH 
+
+O(1+ALPHA)----> 1 IS USED FOR HASH FUNCTION COMPUTATION 
+
+
+EXPECTED TIME TO DELETE
+
+
+O(1+ALPHA)
+
+
+
+
+
+
+
+
+
+
+DATA STRUCTURE for storing chains 
+1...........
+l ---> is the length 
+Linked List:  SEARCH--O(l),DELETE-O(l),insert O(l)
+
+DIS:
+ NOT CACHE FRIENDLLY
+2.......................
+Dynamic Sized Arrays ( vector in cpp, Arraylist in Java, list in python)
+// same as linked list 
+but it cache FRIENDLLY
+
+Self Balancing :Bst( AVL tree, Red Black tree)
+
+SEARCH,insert,DELETE ----->O(logn)
+//it is not cache FRIENDLLY

@@ -1,0 +1,11 @@
+stack overflow in recursion 
+bcz size of the stack is fixed 
+
+heap (free store )4
+
+size is not fixed 
+// new operator is allocate memory in heap 
+// we should deallocate memoy in case of the dynamic memory location 
+
+.. dangling pointer is the pointer which is pointing to that address where is no value is present 
+

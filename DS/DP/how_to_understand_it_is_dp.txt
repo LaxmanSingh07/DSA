@@ -1,0 +1,18 @@
+figure out 
+min or max output 
+
+
+try all possible way comes in 
+figure out the best out 
+
+
+Recursion -----> All possible ways 
+
+
+tip by striver 
+
+1) Try to represent the problem in terms of index 
+2) Do all possible stuffs on that index according to the problem statment 
+3) sum of all stuffs ----> (count all ways)
+    min(of all stuffs ) -----> find min 
+

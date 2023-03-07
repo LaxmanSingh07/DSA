@@ -1,0 +1,52 @@
+//universe of key 
+// 1. phone numbers
+// 2. names 
+// 3. employee id
+
+HASH FUNCTION 
+
+CONVERT THESE LARGE KEY TO SMALL VALUE , CAN WE USED AS AN INDEX OF AN ARRAY 
+
+
+how hash FUNCTION work ? 
+
+1. should always map a large key to same small key 
+2. should generate value from 0 to m-1  -----> m in the size of the hash table 
+3. should be fast, O(1) ofr intergers and O(len) ofr string of length 'len'
+4. should uniformaly distribate large keys into Hash Table slots-----> it is most important part the most toughest part ot acheieve 
+
+
+
+
+size of the hash FUNCTION is depends how many keys you are going the insert in the hash table 
+like you are inserting the n key then your size will be in perpostional to the n 
+
+EXAMPLE hash FUNCTION
+
+1. h(large_key )=large_key%m  ---> like of integer 
+line m=200
+m is typically chosen as the prime no which is closer to the hash table size 
+why prime no?
+there will be less comman factor and you will have betterr distribution 
+
+bad value of power of 10 or 2 
+we don't try to choose the prime no which is near to that of 10 or 2's power 
+
+this is also not a very good hash function 
+
+
+2. for string, weighted sum 
+    str[]="abcd"
+    str[0]*x^0+str[1]*x^1+str[2]*x^2+str[3]*x^3+str[4]*x^4
+//problem
+
+permutation can be there 
+or another sequence of a string can match with 
+
+
+3. Universal Hashing ---> you have group of hash fuction 
+ and you randomally pick a hash function 
+
+Universal Hasing make sure that your expected time will be O(1)
+
+

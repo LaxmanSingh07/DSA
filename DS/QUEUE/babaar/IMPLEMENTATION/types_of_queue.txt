@@ -1,0 +1,11 @@
+1. input restricted Queue
+2. Ouput restricted Queue
+3. Doubly Ended Queue
+
+operations on the deque
+push_front()
+push_back()
+pop_front()
+pop_back()
+
+practical uses in Operating 

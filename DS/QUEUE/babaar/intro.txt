@@ -1,0 +1,31 @@
+// queue is the linear data structrue which flow the diciplane FIFO ---> which is first in first out
+
+basic properites of the queue are as follows 
+
+1.push
+2. pop
+
+
+it has two pointer front and rare 
+
+we generally push using the rare pointer and pop function is utilized by the front pointer 
+
+
+
+STL ----> QUEUE CPP REFERECE 
+#include<queue>
+
+queue<int> q;
+
+enqueue is used for insert 
+and dequeue is used for pop
+q.push( 17) ---> it will push 17 in the queue
+q.pop()----------> it is used to pop out the element 
+
+size-----> q.size();
+Empty  ----> q.empty( );-----------> true /false 
+
+sabse age front mein kon sa element hai 
+
+q.front( )----------> it will return the value at which the front value is pointing 
+

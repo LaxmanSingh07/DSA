@@ -1,0 +1,4 @@
+1. inoder
+2. preorder
+3. postorder 
+  

@@ -1,0 +1,12 @@
+header{
+    background-color: aqua;
+    color: white ;
+    margin: 23px;
+    padding: 12px;
+    box-sizing: border-box;
+    text-align: left;
+}
+#first{
+    background-color: blue;
+    color: white ;
+}

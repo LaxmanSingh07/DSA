@@ -1,0 +1,48 @@
+Clustering (A problem with linear probing)
+
+
+    ***** 
+    *   *
+    *****
+    -->*   *
+   | *****
+   | *****   
+   | ***** 
+   |*****   
+    -->*****
+    *   *
+    *****
+    *   *
+    *****
+    *   *
+    *****
+
+
+    Due to the cluster all your operation become costly 
+    search,insert and delete
+
+linear probing
+hash(key,i)=(h(key)+l)%7
+hash(key)=key%7;
+
+    How to handle these problem
+
+
+    1. Quadratic probing
+      (i)- hash(key,i)=(h(key)+l^2)%m)
+
+       1. in the Quadratic there is a problem of secondary cluster
+        secondary cluster is better then primary Clustering
+       2. But Quadratic probing has a more disadvantage compare to linear probing
+            it might not find the empty slots even there are empty SLOTS
+        
+        load factor<0.5
+        alpha=n/m
+        m is a prime factor
+        then it will gurantee you that it will find an empty slot
+        if you Double the size of hash table as compare to the keys that you are insearting to the hash table 
+
+
+
+    2. Double hashing
+        hash(key,i)=(h1(key)+i*h2(key))%m

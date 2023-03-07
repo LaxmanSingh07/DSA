@@ -1,0 +1,12 @@
+it we know keys in advance, then we can perfect Hashing
+if we don't know keys then we use one of the following
+    1. chaining ----> we make cahin of the collide item
+    2. Open Addressing  
+            2.1 liner probling 
+            2.2 Quadratic Probing 
+            2.3 Double hashing 
+
+
+Birthday Paradox 
+
+// if you don't know the key in advance then collision is bound to happen 
