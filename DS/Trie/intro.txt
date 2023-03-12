@@ -1,0 +1,23 @@
+tries is generally used for the implemenation of the dictinoary
+
+efficient for the following operations 
+on words in a dictinoary 
+
+----->search
+----->Insert
+----->Delete
+----->prfix search
+----->Lexicographical ordering of words 
+
+
+
+comparsion with hashing 
+
+                  tries                             hashing
+
+search      theta(word_len) in worst case         theta(word_len) on averge 
+Insert             ''                                   ''
+Delete             ''                                   ''
+Prefix search       theta(prefix_len+output_len)        Not Supported
+Lexicographical     theta(output-len)                   Not Supported                         
+ordering    

@@ -1,0 +1,13 @@
+dp is nothing but the optimizatino over the plan recursion
+
+the idea is to reuse the solutions of subprolems when there are overlapping subprolems
+
+1. Memoization (Top Down)
+2. Tabulation (Bottom Up)
+
+//Applications of dp
+1. Bellman ford algorithm 
+2. floyd warshell algorithm
+3. diff utility (LCS)
+4. search closed words(Edit Distance )
+5. Resource allocation (0-1 Knapsack)

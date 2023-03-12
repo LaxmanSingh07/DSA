@@ -1,3 +1,8 @@
+//it is not the best time complexity all though
+//it is used only to understand 
+//we can find the nth fino in log(n) time 
+
+
 #include<iostream>
 #include<vector>
 using namespace std;
