@@ -1,6 +1,6 @@
 // C program for Huffman Coding
-#include <stdio.h>
-#include <stdlib.h>
+#include<bits/stdc++.h>
+using namespace std;
 
 // This constant can be avoided by explicitly
 // calculating height of Huffman Tree
