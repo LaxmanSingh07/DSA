@@ -1,5 +1,17 @@
-//fraction of the valeus are allowed 
-//value per unit weight is maximum
+#include <bits/stdc++.h>
+using namespace std;
+
+// For Example
+
+// Value (rs)   21  24  12  40  30
+// Weight (kg)  7   4   6   5   6
+
+// w 20
+
+// value per unit weight 
+
+
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -19,11 +31,11 @@ int main()
     int w;
     cin >> w;
 
-    sort(v.begin(), v.end(), [&](pair<int, int> &a, pair<int, int> &b) {
+    sort(v.begin(), v.end(), [&](pair<int, int> &a, pair<int, int> &b)
+         {
         double r1 = (double)a.first / a.second;
         double r2 = (double)b.first / b.second;
-        return r1 > r2;
-    });
+        return r1 > r2; });
 
     double res = 0.0;
 
@@ -42,6 +54,6 @@ int main()
     }
 
     cout << res << endl;
-    
+
     return 0;
 }

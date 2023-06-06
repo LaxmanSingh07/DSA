@@ -1,3 +1,10 @@
+
+//Problem : You are given an array of Denomination and a value X. You need to find the minimum number of coins 
+
+//Approach 
+
+// 1. Strat from the largest value,till we can include it take,it.
+
 #include<iostream>
 #include<vector>
 #include<cmath>
