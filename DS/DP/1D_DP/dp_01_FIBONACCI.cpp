@@ -29,8 +29,26 @@ int main()
     cin>>n;
     // int dp[n+1];
     // memset(dp,sizeof(dp));
+
+
     // vector<int > dp(n+1,-1);
     // cout<<f(n,dp);
+
+    
+    // tabulation  
+
+    vector<int>dp(n+1,0);
+
+    dp[0]=0,dp[1]=1; // same as base case 
+
+    for(int i=2;i<=n;i++){
+        dp[i]=dp[i-1]+dp[i-2]; // same as recursive 
+    }
+    cout<<dp[n]<<endl;
+
+
+    // space complexity 
+
     int prev2=0;
     int prev=1;
     for(int i=2;i<=n;i++)

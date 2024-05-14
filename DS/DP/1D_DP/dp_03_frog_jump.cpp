@@ -78,6 +78,8 @@ int frogJump(int n, vector<int> &heights)
 
 // space optimization
 
+// any time when we are using only 2 values then we can use space optimization (ind-1,ind-2)
+
 int frogJump(int n, vector<int> &heights)
 {
 

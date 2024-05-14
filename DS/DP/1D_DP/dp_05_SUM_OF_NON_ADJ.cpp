@@ -1,28 +1,27 @@
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
 using namespace std;
 
-//recursion solution 
-// int f(int ind,vector<int>&nums)
-// {
-//     if(ind==0) return nums[ind];
-//     if(ind<0)   return 0;
- 
+// recursion solution
+//  int f(int ind,vector<int>&nums)
+//  {
+//      if(ind==0) return nums[ind]; // you have not picked element at 1st index
+//      if(ind<0)   return 0;
+
 //     int pick=nums[ind]+f(ind-2,nums);
 //     int notpick=0+f(ind-1,nums);
 
 //     return max(pick,notpick);
 
-// }
+// } // tc: O(2^n) sc: O(n)
 
-
-//memo 
+// memo
 
 // int f(int ind,vector<int>&nums,vector<int>&dp)
 // {
 //     if(ind==0) return nums[ind];
 //     if(ind<0)   return 0;
- 
+
 //  if(dp[ind]!=-1){
 //     return dp[ind];
 //  }
@@ -31,11 +30,9 @@ using namespace std;
 
 //     return max(pick,notpick);
 
-// }
+// }  // tc: O(n) sc: O(n)
 
-
-
-//Tabulation 
+// Tabulation
 
 // int f(int n,vector<int>&nums,vector<int>&dp)
 // {
@@ -53,41 +50,48 @@ using namespace std;
 
 // }
 
+// space optimization
 
-//Space optimization 
-
-
-
-int maximumNonAdjacentSum(vector<int>&nums)
+int f(vector<int> &nums)
 {
-    int n=nums.size();
-    //recursion
-    // return f(n-1,nums);
+    int n = nums.size();
+    int prev = nums[0];
+    int prev2 = 0;
+    for (int i = 1; i < n; i++)
+    {
+        int take = nums[i] + ((i > 1) ? prev2 : 0);
+        int notTake = 0 + prev;
+        int curri = max(take, notTake);
+        prev2 = prev;
+        prev = curri;
+    }
+    return prev;
+}
 
-    //memo
+int maximumNonAdjacentSum(vector<int> &nums)
+{
+    int n = nums.size();
+    // recursion
+    //  return f(n-1,nums);
+
+    // memo
+    //  vector<int>dp(n,-1);
+    //  return f(n-1,nums,dp);
+
+    // tabulation
     // vector<int>dp(n,-1);
+
     // return f(n-1,nums,dp);
 
 
-    //space optimization 
+    // space optimization
 
-    int prev=nums[0];
-    int prev2=0;
-    for(int i=1;i<n;i++)
-    {
-        int take=nums[i]+((i>1)?prev2:0);
-        int notTake=0+prev;
-        int curri=max(take,notTake);
-        prev2=prev;
-        prev=curri;
-    }
-    return prev;
 
+    return f(nums);
 }
 
 int main()
 {
-    vector<int>v={2,1,4,9};
-    cout<<maximumNonAdjacentSum(v);
-
+    vector<int> v = {2, 1, 4, 9};
+    cout << maximumNonAdjacentSum(v);
 }
