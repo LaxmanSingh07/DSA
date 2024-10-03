@@ -31,11 +31,8 @@ int lcs(string s, string t)
         }
     }
     int len = dp[n][m];
-    string ans = "";
-    for (int i = 0; i < len; i++)
-    {
-        ans += '%';
-    }
+    string ans(len, '%');
+
     int index = len - 1;
     int i = n, j = m;
     while (i > 0 && j > 0)

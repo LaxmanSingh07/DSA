@@ -26,8 +26,7 @@ int lcs(string &s, string &t)
             if (s[i - 1] == t[j - 1]){
                dp[i][j] = 1 + dp[i - 1][j - 1];
                ans=max(ans,dp[i][j]);
-            }
-            
+            } 
 
             else
                 dp[i][j] = 0;

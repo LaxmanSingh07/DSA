@@ -95,9 +95,12 @@ int lcs(string s, string t)
     //             curr[j] = max(prev[j], curr[j - 1]);
     //     }
     //     prev = curr;
+    //  for(int i=0;i<=m;i++) cout<<prev[i]<<" ";
+    // cout<<endl;
     // }
     // return prev[m];
 }
+
 int main()
 {
 
